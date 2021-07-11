@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="banner text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 >SPD Take Home Project</h1>
+                <h4 class="py-4">Using Openweathermap API</h4>
+                <div class="weather-form">
+                    <h3 class="py-3">Check the weather:</h3>
+                    <form action="/results" method="GET">
+                        <fieldset>
+                        <legend>Please fill the information:</legend>
+                            <div>
+                                <label>
+                                    City: <input type="text" name="city">
+                                </label>
+                            </div>
+                            
+                            <br>
+
+                            <div>
+                                    Please choose your desired units: <br>
+                                <label>
+                                    <input type="radio" name="units" value="imperial">
+                                    Fahrenheit
+                                </label>
+
+                                <label>
+                                    <input type="radio" name="units" value="metric">
+                                    Celsius
+                                </label>
+                            </div>
+
+                            <br>
+                            
+                            <div>
+                                <input type="submit" value="Submit">
+                            </div>
+
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

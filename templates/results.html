@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="report text-center">
+                    <h1>Weather in {{city}}</h1>
+                    <p>on {{date}}</p>
+                    <h4>Temperature: {{temp}}° {{temp_units}}</h4>
+                    <h4>Description: {{description}}</h4>
+                </div>
+
+                <br>
+
+                <div class="mood-form text-center">
+                    <h2>What's your mood like based on reports?</h1>
+                
+                    <form action="/mood" method="GET">
+                        <fieldset>
+                                <div>
+                                    <label>
+                                        <input type="text" name="mood">
+                                    </label>
+                                </div>
+                                    
+                                <div>
+                                    <input type="submit" value="Submit">
+                                </div>
+                
+                        </fieldset>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+{% endblock %}
